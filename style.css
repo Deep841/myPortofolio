@@ -116,20 +116,19 @@ nav ul li a:hover::after{
   width: 100%;
 }
 
-.header-text h2{
-  margin-top: 10%;
-  margin-bottom: 5%; 
+.header-text h2 {
+  margin-top: 30vh;
+  margin-bottom: 2vh;
   font-size: 60px;
-  padding-left: 5%;
-  /* left: ; */
-  /* text-align: center; */
-} 
- 
-.header-text h3{
-  font-size: 25px;
-  padding-left: 11%;
-    
-} 
+  text-align: center;
+  padding-left: 0;
+}
+.header-text h3 {
+  font-size: 28px;
+  text-align: center;
+  padding-left: 0;
+  margin-top: 2vh;
+}
 
 
 .header-text h3 span{
@@ -342,7 +341,6 @@ font-size: 20px;
 
 } 
 
-
 /* -----------------------------[ Certificate Section ]-------------------------------*/
 
 /* .certificate_section{
@@ -551,6 +549,9 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 1000px){
+    html {
+    font-size: 90%;
+  }
   #header{
     /* width: 80%;  */
     /* height: 1%;  */
@@ -559,21 +560,21 @@ nav .fa-solid{
     /* background: linear-gradient(rgb(0,0,0,0.6), #ff004f); */
   }
 
-  .header-text h2{
-    margin-top: 139%;
-    font-size: 70px;
-  }
+.header-text h2 {
+  margin-top: 45vh;
+  font-size: 50px;
+  text-align: center;
+}
+.header-text h3 {
+  font-size: 28px;
+  text-align: center;
+  padding-left: 0;
+  margin-top: 2vh;
+}
 
-  .header-text h3{
-    font-size: 40px;
-    /* color: #fff; */
-    margin-top: 6%;
-    padding-left: 13%;
-  }
-
-  .header-text h3 span{
-    font-size: 68px;
-  }
+.header-text h3 span {
+  font-size: 28px;
+}
 
   nav .fa-solid{
     display: block;
@@ -632,11 +633,12 @@ nav .fa-solid{
     padding-left: 11%;
   }
   
-  .about-col-2 h2{
-    margin-top: 6%;
-    margin-bottom: 5%;
-    font-size: 90px;
-  }
+.about-col-2 h2 {
+  margin-top: 6%;
+  margin-bottom: 5%;
+  font-size: 30px;
+  text-align: center;
+}
 
   .about-col-2 .for_mobile{
     padding-bottom: 4%;
@@ -657,12 +659,11 @@ nav .fa-solid{
       
   }
 
-  .tab-contents ul li h9{
-    margin-bottom: 80px;
-    padding-left: 8%;
-    font-size: 12px;
-  }
-
+.tab-contents ul li p {
+  margin-bottom: 80px;
+  padding-left: 8%;
+  font-size: 12px;
+}
   .contact-left, .contact-right{
     flex-basis: 100%;
   }
@@ -673,11 +674,11 @@ nav .fa-solid{
     margin-bottom: 80px;
   }
 
-  .certificate img{
-    height: 45%;
-    padding-left: 30%;
-    border-radius: 4%;
-  }
+.certificate img {
+  height: auto;
+  width: 90%;
+  padding-left: 5%;
+}
   
   .layer h3,p,a{
     text-align: center;
@@ -693,8 +694,8 @@ nav .fa-solid{
     display: grid;
     margin-bottom: 10%;
     /* grid-template-columns: auto auto auto auto; */
-    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr)) 
-  }
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+}
 
   #certificate_section{
     font-size: 25px;
@@ -739,10 +740,10 @@ nav .fa-solid{
     font-size: 30px;
   }
 
-  .contact-right .submit_btn{
-    font-size: 31px;
-    margin-left: 40%;
-  }
+.contact-right .submit_btn {
+  margin: 20px auto;
+  display: block;
+}
 
   .copyright{
     font-size: 15px;
