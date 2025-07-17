@@ -546,43 +546,45 @@ form input, form textarea{
 
 /*---------------------------------------------------- Css Media Query (used for small screens) */
 
-nav .fa-solid{
+nav .fa-solid {
   display: none;
 }
 
-@media only screen and (max-width: 1000px){
-  #header{
-    /* width: 80%;  */
-    /* height: 1%;  */
+@media only screen and (max-width: 1000px) {
+
+  #header {
     background-image: url("images/2_black.png");
     border-radius: 9%;
-    /* background: linear-gradient(rgb(0,0,0,0.6), #ff004f); */
   }
 
-  .header-text h2{
+  .header-text {
+    text-align: center;
+  }
+
+  .header-text h2 {
     margin-top: 139%;
-    font-size: 70px;
+    font-size: clamp(32px, 8vw, 48px);
   }
 
-  .header-text h3{
-    font-size: 40px;
-    /* color: #fff; */
+  .header-text h3 {
+    font-size: clamp(20px, 6vw, 36px);
     margin-top: 6%;
     padding-left: 13%;
   }
 
-  .header-text h3 span{
-    font-size: 68px;
+  .header-text h3 span {
+    font-size: clamp(28px, 8vw, 44px);
   }
 
-  nav .fa-solid{
+  nav .fa-solid {
     display: block;
     font-size: 60px;
+    cursor: pointer;
+    left: 25px;
   }
 
-  nav ul{
-    /* background: #ff004f; */
-    background: linear-gradient(rgb(0,0,0,0.6), #ff004f);
+  nav ul {
+    background: linear-gradient(rgb(0, 0, 0, 0.6), #ff004f);
     position: fixed;
     top: 0;
     right: -200px;
@@ -593,172 +595,182 @@ nav .fa-solid{
     transition: right 0.5s;
   }
 
-  nav ul li{
+  nav ul li {
     display: block;
-    margin: 25px;    
+    margin: 25px;
   }
 
-  #sidemenu li a{
+  #sidemenu li a {
     font-size: 27px;
-    
     margin-left: 3%;
   }
 
-  #sidemenu li{
+  #sidemenu li {
     margin-top: 50%;
   }
 
-  nav .fa-solid{
-    cursor: pointer;
-    left: 25px;
-  }   
-  
-  nav ul .fa-solid{
+  nav ul .fa-solid {
     position: absolute;
     top: 25px;
     left: 25px;
     cursor: pointer;
   }
 
-  .sub-title{
+  .sub-title {
     font-size: 29px;
     text-align: center;
-    
   }
 
-  .about-col-1, .about-col-2 {
+  .about-col-1,
+  .about-col-2 {
     flex-basis: 100%;
     max-width: 90%;
-    padding-left: 11%;
+    padding-left: 5%;
+    text-align: center;
   }
-  
-  .about-col-2 h2{
+
+  .about-col-2 h2 {
     margin-top: 6%;
     margin-bottom: 5%;
-    font-size: 90px;
+    font-size: clamp(24px, 6vw, 48px);
   }
 
-  .about-col-2 .for_mobile{
+  .about-col-2 .for_mobile {
     padding-bottom: 4%;
   }
-  /* .tab-links{ */
-    /* font-size: 20px; */
-    /* margin-bottom: 7%; */
-  /* } */
 
-  .tab-titles p{
-    font-size: 35px;
+  .tab-titles p {
+    font-size: 24px;
     margin-bottom: 5%;
-  }    
-
-  .tab-contents ul li span{
-      font-size: 13px;
-      margin-bottom: 10px;
-      
+    text-align: center;
   }
 
-  .tab-contents ul li h9{
-    margin-bottom: 80px;
-    padding-left: 8%;
+  .tab-contents ul li span {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .tab-contents ul li h9 {
     font-size: 12px;
+    padding-left: 8%;
+    display: block;
   }
 
-  .contact-left, .contact-right{
+  .projects-list,
+  .certificate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+
+  .contact-left,
+  .contact-right {
     flex-basis: 100%;
+    text-align: center;
   }
 
-  #certificate_section h1{
+  #certificate_section h1 {
     font-size: 40px;
     margin-top: -30px;
     margin-bottom: 80px;
   }
 
-  .certificate img{
+  .certificate img {
     height: 45%;
     padding-left: 30%;
     border-radius: 4%;
   }
-  
-  .layer h3,p,a{
+
+  .layer h3,
+  .layer p,
+  .layer a {
     text-align: center;
   }
 
-  .container h1{
-    font-size: 75px;
+  .container h1 {
+    font-size: 60px;
   }
 
-  .projects-list{
-    /* margin-top: 1px; */
-    gap: 50px;
-    display: grid;
-    margin-bottom: 10%;
-    /* grid-template-columns: auto auto auto auto; */
-    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr)) 
-  }
-
-  #certificate_section{
+  #certificate_section {
     font-size: 25px;
     line-height: 2;
   }
 
-  #certificate_section .container h1{
-    font-size: 95px;
+  #certificate_section .container h1 {
+    font-size: 75px;
     margin-bottom: 1%;
-    
   }
 
-  #certificate_section .btn{
-    font-size: 11px;
+  #certificate_section .btn {
+    font-size: 16px;
   }
 
-  .contact-left h1{
-    font-size: 110px;
-  }
-
-  .social-icons{
-    margin-top: -50px;
-    margin-right: 70px;
-  }
-  .social-icons a i{
+  .contact-left h1 {
     font-size: 60px;
-    
-    /* margin-right: 50px;
-    margin-left: 10px; */
   }
 
-  .contact-left a{
+  .social-icons {
+    margin-top: 20px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .social-icons a i {
+    font-size: 40px;
+    margin: 0 15px;
+  }
+
+  .contact-left a {
     font-size: 20px;
     margin-top: 10%;
+    display: block;
   }
 
-  .contact-right form input{
-    font-size: 30px;
+  .contact-right form input,
+  .contact-right form textarea {
+    font-size: 18px;
+    width: 90%;
+    margin: 10px auto;
   }
 
-  .contact-right form textarea{
-    font-size: 30px;
+  .contact-right .submit_btn {
+    font-size: 20px;
+    margin: 20px auto;
+    display: block;
   }
 
-  .contact-right .submit_btn{
-    font-size: 31px;
-    margin-left: 40%;
-  }
-
-  .copyright{
+  .copyright {
     font-size: 15px;
+    text-align: center;
   }
 
-  .copyright i{
+  .copyright i {
     font-size: 30px;
   }
-  
 
+  /* Global fixes for alignment */
+  body,
+  .container,
+  .header-text,
+  .about-col-2,
+  .tab-titles,
+  .tab-contents {
+    text-align: center;
+  }
 
+  section,
+  .container,
+  .about-col-2,
+  .tab-contents {
+    padding: 10px 15px;
+  }
 }
 
-
-#success_message{
-color: #61b752;
-margin-top: 20px;
-display: block;
+#success_message {
+  color: #61b752;
+  margin-top: 20px;
+  display: block;
 }
