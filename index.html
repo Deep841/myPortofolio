@@ -1,432 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Deep</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep | Portfolio</title>
 
-    <!----CSS link----->
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/7a5bf939ff.js" crossorigin="anonymous"></script>
-  </head>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7a5bf939ff.js" crossorigin="anonymous"></script>
 
+  <!-- Google Fonts (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-  <div  id="header">
-     <div class="container">
-      <!-- <video autoplay loop muted plays-inline class="back-video">
-        <source src="images/aboutMe.mp4" type="video/mp4">
-      </video> -->
-        <nav>
-          <!-- <img src="images/name.png" class="logo"> -->
-          <!-- <img src="images/3.jpg" id="center">    -->
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificate_section">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-         </nav>
-         <div class="header-text">
-              <h2> < AI / ML > </h2><br>
-              <h3>Hi&nbsp;, I'm &nbsp;<span>Deep...</span><br><br>Welcome to my Portfolio Website</h3>
-         </div> 
+<body>
 
-       </div>
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container">
+      <nav class="navbar">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificate_section">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="header-text">
+        <h2>&lt; AI / ML &gt;</h2>
+        <h3>Hi, I'm&nbsp;<span>Deep</span><br>Welcome to my Portfolio Website</h3>
+      </div>
     </div>
-  <!------------------------------About Section---------------------------- -->
-  <div id = "about">
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
     <div class="container">
       <div class="row">
-         <div class="about-col-1">
-            <img src="images/bg.png">
-         </div>
+        <div class="about-col-1">
+          <img src="images/bg.png" alt="Profile image">
+        </div>
+
         <div class="about-col-2">
           <h2 class="sub-title">About Me</h2>
-          <p class="for_mobile">Insightful post graduate student looking forward to join a reputed organization in order to utilize my learning, skills and
-            work for the betterment of the company where I can serve as a valuable person.</p>
+          <p class="for_mobile">
+            Insightful postgraduate student looking forward to joining a reputed organisation in order to utilise my
+            learning, skills and work for the betterment of the company.
+          </p>
 
-           <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-              <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
-              <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-           </div>  
+          <!-- Tabs -->
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
 
-            <div class="tab-contents active-tab" id="skills">
-                <ul>
-                  <li><span>1) Programming</span><br><h9> C++, Python, SQL, familier with: Java, R</h9></li>
-                  <li><span>2) UI Technologies</span><br><h9>Rshiny, shinydashboard, familier with: Jetpack Compose</h9></li>
-                  <li><span>3) Database Software</span><br><h9>MySQL Workbench, familier with:CSV/Excel, MongoDB</h9></li>
-                  <li><span>4) Libraries</span><br><h9>Numpy, Pandas, Matplotlib, Seaborn, familier with:MediaPipe, OpenCV, PaddleOCR, TextBlob, pyttsx3, SpeechRecognition</h9></li>
-                  <li><span>5) Tools</span><br><h9>Jupter Notebook, GitHub, VS code, </h9></li>
-                </ul>
-              </div>
-
-<div class="tab-contents" id="experience">
-  <ul>
-    <li>
-      <span>1) Machine Learning Intern</span><br>
-      <h4>Cognifyz Technology</h4>
-      <a href="https://github.com/Deep841/Cognifyz_Internship_Tasks_ML" target="_blank">
-        <i class="fas fa-external-link-alt"></i> View Project
-      </a>
-    </li>
-  </ul>
-</div>
-          <div class="tab-contents" id="education">
+          <div class="tab-contents active-tab" id="skills">
             <ul>
-              <li><span>1) TIET,Patiala (2024 - 2026)</span><br><h9>MCA</h9></li>
-              <li><span>1) KU,Kurukshetra (2021 - 2024)</span><br><h9>Bachelor in SCI NM</h9></li>
-              <li><span>2) The Century School , Haryana (2021)</span><br><h9>Senior Secondary Education</h9></li>
-              <li><span>3) Pratap Public School , Karnal (2019)</span><br><h9>High School</h9></li>
+              <li><span>Programming</span><h9>C++, Python, SQL  |  familiar: Java, R</h9></li>
+              <li><span>UI Tech</span><h9>R Shiny, shinydashboard  |  familiar: Jetpack Compose</h9></li>
+              <li><span>Databases</span><h9>MySQL Workbench  |  familiar: CSV/Excel, MongoDB</h9></li>
+              <li><span>Libraries</span><h9>NumPy, Pandas, Matplotlib, Seaborn  |  familiar: MediaPipe, OpenCV, PaddleOCR, TextBlob, pyttsx3, SpeechRecognition</h9></li>
+              <li><span>Tools</span><h9>Jupyter Notebook, GitHub, VS Code</h9></li>
             </ul>
           </div>
 
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>Machine Learning Intern</span><br>
+                Cognifyz Technology —
+                <a href="https://github.com/Deep841/Cognifyz_Internship_Tasks_ML" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> Project Repo
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>MCA&nbsp;(2024-26)</span><h9>Thapar Institute of Engineering & Technology, Patiala</h9></li>
+              <li><span>B.Sc. (2021-24)</span><h9>Kurukshetra University — Non-Medical</h9></li>
+              <li><span>Senior Secondary (2021)</span><h9>The Century School, Haryana</h9></li>
+              <li><span>High School (2019)</span><h9>Pratap Public School, Karnal</h9></li>
+            </ul>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
+  </section>
 
-<!-- ------------------------------Projects Section---------------------------- -->
-<div id="projects">
-  <div class="container">
-    <h1 class="sub-title">About my Projects</h1><br>
-    <div class="projects-list">
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <h1 class="sub-title">Projects</h1>
 
-      <!-- E-commerce Sales Analytics -->
-      <div>
-        <i class="fa-solid fa-chart-line"></i>
-        <h2>E-commerce Sales Analytics</h2>
-        <p>
-          Interactive BI dashboard analyzing sales by category, customer, region, and time using Power BI & MySQL.
-          <br><br>
-          <strong>Tech used:</strong> Power BI, MySQL, DAX, Power Query
-        </p>
-        <a href="https://github.com/Deep841/ecommerce-sales-analytics" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
+      <div class="projects-list">
+
+        <!-- Example project card -->
+        <article class="project-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h2>E-commerce Sales Analytics</h2>
+          <p>
+            Interactive BI dashboard analysing sales by category, customer segment, region and time.
+            <br><br><strong>Tech:</strong> Power BI, MySQL, DAX, Power Query
+          </p>
+          <a href="https://github.com/Deep841/ecommerce-sales-analytics" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- AI Ticket Management System -->
+        <article class="project-card">
+          <i class="fa-solid fa-ticket"></i>
+          <h2>AI-Powered Ticket Management</h2>
+          <p>
+            ML-driven support platform that auto-categorises, prioritises and assigns tickets.
+            <br><br><strong>Tech:</strong> Node.js, Express, MongoDB, JWT, Gemini API, Nodemailer
+          </p>
+          <a href="https://github.com/Deep841/AI-ticket-system" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Medical AI Chatbot -->
+        <article class="project-card">
+          <i class="fa-solid fa-stethoscope"></i>
+          <h2>Medical AI Chatbot</h2>
+          <p>
+            LLM-powered chatbot answering medical queries using semantic search on a custom knowledge base.
+            <br><br><strong>Tech:</strong> Python, LangChain, Hugging Face, Pinecone, Flask
+          </p>
+          <a href="https://github.com/Deep841/medical-ai-chatbot" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Smart Fitness Insights -->
+        <article class="project-card">
+          <i class="fa-solid fa-dumbbell"></i>
+          <h2>Smart Fitness Insights</h2>
+          <p>
+            Real-time AI fitness dashboard with personalised health and workout recommendations.
+            <br><br><strong>Tech:</strong> R, Shiny, ggplot2, Plotly, Random Forest, Isolation Forest
+          </p>
+          <a href="https://github.com/Deep841/Smart-Fitness-Insights" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Blood Management System -->
+        <article class="project-card">
+          <i class="fa-solid fa-droplet"></i>
+          <h2>Blood Management System</h2>
+          <p>
+            Secure donor–recipient matching platform with automated email workflows.
+            <br><br><strong>Tech:</strong> HTML, CSS, JS, Node.js, Express, MongoDB
+          </p>
+          <a href="https://github.com/Deep841/Blood-Management-System" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Sentiment Analysis -->
+        <article class="project-card">
+          <i class="fa-solid fa-comments"></i>
+          <h2>Sentiment Analysis</h2>
+          <p>
+            Speech-to-text sentiment analysis with visualised emotional tone.
+            <br><br><strong>Tech:</strong> Python, NLTK (VADER), Google Speech Recognition, Matplotlib
+          </p>
+          <a href="https://github.com/Deep841/Sentiment-Analysis" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Talk Lens -->
+        <article class="project-card">
+          <i class="fa-solid fa-glasses"></i>
+          <h2>Talk Lens (Ongoing)</h2>
+          <p>
+            Smart glasses that read and translate text aloud via gesture recognition.
+            <br><br><strong>Tech:</strong> Python, MediaPipe, PaddleOCR, OpenCV, pyttsx3, ESP32, Arducam
+          </p>
+          <a href="https://github.com/Deep841/Talk-Lens" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Handwritten Equation Solver -->
+        <article class="project-card">
+          <i class="fa-solid fa-square-root-variable"></i>
+          <h2>Handwritten Equation Solver</h2>
+          <p>
+            CV system that detects and solves handwritten equations in real-time.
+            <br><br><strong>Tech:</strong> Python, OpenCV, CNN, PaddleOCR
+          </p>
+          <a href="https://github.com/Deep841/Solve-HandWritten-Equation" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Encoder–Decoder App -->
+        <article class="project-card">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h2>Encoder–Decoder App</h2>
+          <p>
+            Secure Android tool for text encoding & decoding built with Jetpack Compose.
+            <br><br><strong>Tech:</strong> Kotlin, Jetpack Compose, Android Studio
+          </p>
+          <a href="https://github.com/Deep841/App_Development" target="_blank">
+            <i class="fas fa-external-link-alt"></i> GitHub
+          </a>
+        </article>
+
+        <!-- Planet Fitness Website -->
+        <article class="project-card">
+          <i class="fa-solid fa-dumbbell"></i>
+          <h2>Planet Fitness & Spa Website</h2>
+          <p>
+            Responsive gym website with Instagram integration and mobile-first UX.
+            <br><br><strong>Tech:</strong> HTML, CSS, JavaScript
+          </p>
+          <a href="https://deep841.github.io/Planet-Fitness/" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live
+          </a>
+          <a href="https://github.com/Deep841/Planet-Fitness" target="_blank">
+            <i class="fas fa-code"></i> Code
+          </a>
+        </article>
+
       </div>
-
-      <!-- AI Ticket Management System -->
-      <div>
-        <i class="fa-solid fa-ticket"></i>
-        <h2>AI-Powered Ticket Management System</h2>
-        <p>
-          AI-driven support system to auto-categorize, prioritize, and assign tickets with role-based access and email workflows.
-          <br><br>
-          <strong>Tech used:</strong> Node.js, Express, MongoDB, JWT, Gemini API, Nodemailer
-        </p>
-        <a href="https://github.com/Deep841/AI-ticket-system" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Medical AI Chatbot -->
-      <div>
-        <i class="fa-solid fa-stethoscope"></i>
-        <h2>Medical AI Chatbot</h2>
-        <p>
-          End-to-end chatbot answering medical queries using vector databases and LLMs on custom knowledge base.
-          <br><br>
-          <strong>Tech used:</strong> Python, LangChain, Hugging Face, Pinecone, Flask
-        </p>
-        <a href="https://github.com/Deep841/medical-ai-chatbot" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Smart Fitness Insights -->
-      <div>
-        <i class="fa-solid fa-dumbbell"></i>
-        <h2>Smart Fitness Insights</h2>
-        <p>
-          AI-powered fitness dashboard monitoring health metrics, analyzing activity patterns, and delivering lifestyle recommendations.
-          <br><br>
-          <strong>Tech used:</strong> R, Shiny, ggplot2, Plotly, Random Forest, Isolation Forest
-        </p>
-        <a href="https://github.com/Deep841/Smart-Fitness-Insights" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Blood Management System -->
-      <div>
-        <i class="fa-solid fa-droplet"></i>
-        <h2>Blood Management System</h2>
-        <p>
-          Web-based platform enabling secure donor-recipient matching and automated email-driven blood request handling.
-          <br><br>
-          <strong>Tech used:</strong> HTML, CSS, JavaScript, Node.js, Express, MongoDB
-        </p>
-        <a href="https://github.com/Deep841/Blood-Management-System" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Sentiment Analysis -->
-      <div>
-        <i class="fa-solid fa-comments"></i>
-        <h2>Sentiment Analysis</h2>
-        <p>
-          AI-powered system analyzing speech sentiment and visualizing tone using NLP and data visualization.
-          <br><br>
-          <strong>Tech used:</strong> Python, NLTK (VADER), Google Speech Recognition, Matplotlib
-        </p>
-        <a href="https://github.com/Deep841/Sentiment-Analysis" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Talk Lens -->
-      <div>
-        <i class="fa-solid fa-glasses"></i>
-        <h2>Talk Lens (Ongoing)</h2>
-        <p>
-          AI-powered smart glasses that read and translate text aloud based on hand gestures.
-          <br><br>
-          <strong>Tech used:</strong> Python, MediaPipe, PaddleOCR, OpenCV, pyttsx3, ESP32, Arducam
-        </p>
-        <a href="https://github.com/Deep841/Talk-Lens" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Handwritten Equation Solver -->
-      <div>
-        <i class="fa-solid fa-square-root-variable"></i>
-        <h2>Handwritten Equation Solver</h2>
-        <p>
-          ML-based system that detects and solves handwritten mathematical equations in real-time using OCR and CNNs.
-          <br><br>
-          <strong>Tech used:</strong> Python, OpenCV, CNN, PaddleOCR
-        </p>
-        <a href="https://github.com/Deep841/Solve-HandWritten-Equation" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Encoder Decoder App -->
-      <div>
-        <i class="fa-solid fa-mobile-screen"></i>
-        <h2>Encoder - Decoder App</h2>
-        <p>
-          Android application for secure encoding and decoding built with Jetpack Compose in Android Studio.
-          <br><br>
-          <strong>Tech used:</strong> Kotlin, Jetpack Compose, Android Studio
-        </p>
-        <a href="https://github.com/Deep841/App_Development" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
-      <!-- Planet Fitness Website -->
-      <div>
-        <i class="fa-solid fa-dumbbell"></i>
-        <h2>Planet Fitness & Spa Website</h2>
-        <p>
-          A responsive gym website with Instagram integration and optimized design for desktop and mobile.
-          <br><br>
-          <strong>Tech used:</strong> HTML, CSS, JavaScript
-        </p>
-        <a href="https://github.com/Deep841/Planet-Fitness" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View on GitHub
-        </a>
-      </div>
-
     </div>
-  </div>
-</div>
-<!-- ------------------------------Certificate Section---------------------------- -->
-<div id="certificate_section">
+  </section>
+
+<!-- ===== CERTIFICATES ===== -->
+<section id="certificate_section">
   <div class="container">
     <h1 class="sub-title">Certificates</h1>
+
     <div class="certificate-list">
 
-
       <!-- Android App Dev -->
-      <div class="certificate">
-        <img src="images/googlecloud.png">
-        <div class="layer">
-          <h3>Android App Development Training Program</h3>
-          <a href="https://www.linkedin.com/in/deep-332437315/overlay/certifications/469173268/multiple-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M&treasuryMediaId=1744225896409" target="_blank">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
+      <article class="certificate">
+        <img src="images/googlecloud.png" alt="Android App Dev">
+        <h3>Android App Development Training Program</h3>
+        <a href="https://www.linkedin.com/in/deep-332437315/overlay/certifications/469173268/multiple-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M&treasuryMediaId=1744225896409" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </article>
 
       <!-- Microsoft Learn -->
-      <div class="certificate">
-        <img src="images/udemy3.png">
-        <div class="layer">
-          <h3>Microsoft Learn</h3>
-          <a href="https://www.linkedin.com/in/deep-332437315/overlay/certifications/460186398/multiple-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M&treasuryMediaId=1744216909599" target="_blank">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
+      <article class="certificate">
+        <img src="images/udemy3.png" alt="Microsoft Learn">
+        <h3>Microsoft Learn</h3>
+        <a href="https://www.linkedin.com/in/deep-332437315/overlay/certifications/460186398/multiple-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M&treasuryMediaId=1744216909599" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </article>
 
-
-
-      <!-- Kaggle: Intro to Machine Learning -->
-      <div class="certificate">
-        <img src="images/kaggle.png">
-        <div class="layer">
-          <h3>Kaggle – Intro to Machine Learning</h3>
-          <a href="https://www.kaggle.com/learn/certification/deep841/intro-to-machine-learning" target="_blank">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
+      <!-- Kaggle: Intro to ML -->
+      <article class="certificate">
+        <img src="images/kaggle.png" alt="Kaggle">
+        <h3>Kaggle – Intro to Machine Learning</h3>
+        <a href="https://www.kaggle.com/learn/certification/deep841/intro-to-machine-learning" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </article>
 
       <!-- Be10x Power BI Workshop -->
-      <div class="certificate">
-        <img src="images/powerbi.png">
-        <div class="layer">
-          <h3>Be10x – Power BI Workshop</h3>
-          <a href="Certificate.pdf" target="_blank"> <!-- Replace with actual certificate link -->
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
+      <article class="certificate">
+        <img src="images/powerbi.png" alt="Power BI">
+        <h3>Be10x – Power BI Workshop</h3>
+        <a href="Certificate.pdf" target="_blank"> <!-- Replace with actual link -->
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </article>
 
-      <!-- Deloitte Data Analytics Simulation -->
-      <div class="certificate">
-        <img src="images/forage.png">
-        <div class="layer">
-          <h3>Deloitte Australia – Data Analytics Job Simulation</h3>
-          <a href="https://www.linkedin.com/in/deep-332437315/details/certifications/1752785010939/single-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M" target="_blank">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
+      <!-- Deloitte Simulation -->
+      <article class="certificate">
+        <img src="images/forage.png" alt="Deloitte">
+        <h3>Deloitte Australia – Data Analytics Job Simulation</h3>
+        <a href="https://www.linkedin.com/in/deep-332437315/details/certifications/1752785010939/single-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </article>
 
-      <!-- Tata GenAI Simulation -->
-      <div class="certificate">
-        <img src="images/forage.png">
-        <div class="layer">
-          <h3>Tata – GenAI Powered Data Analytics Job Simulation</h3>
-          <a href="https://www.linkedin.com/in/deep-332437315/details/certifications/1752741685602/single-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M" target="_blank">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
+      <!-- Tata GenAI -->
+      <article class="certificate">
+        <img src="images/forage.png" alt="Tata GenAI">
+        <h3>Tata – GenAI Powered Data Analytics Job Simulation</h3>
+        <a href="https://www.linkedin.com/in/deep-332437315/details/certifications/1752741685602/single-media-viewer/?profileId=ACoAAE_55BYBzbbSh_3A2dAHa7bqdWDpn8-UM3M" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </article>
 
     </div>
 
     <a href="https://www.linkedin.com/in/deep-332437315/" class="btn" target="_blank">See More</a>
   </div>
-</div>
-<!------------------------------Contact Form--------------------------------------------------------->  
+</section>
 
-  <div id="contact">
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
     <div class="container">
-        <div class="row">
-          <div class="contact-left">
-             <h1 class="sub-title">Contact Me</h1> 
-             <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;2003deepdeep@gmail.com</p>
-             <p><i class="fa-solid fa-phone-volume"></i>&nbsp;&nbsp;+91&nbsp; 9876543210</p><br>
-             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/deep-332437315/"><i class="fab fa-linkedin"></i></a>&nbsp;&nbsp;
-                <a href="https://github.com/Deep841"><i class="fa-brands fa-github"></i></a>&nbsp;&nbsp;
-                <!-- <a href="https://www.hackerrank.com/profile/ayushsusheel3"><i class="fa-brands fa-hackerrank"></i></a>&nbsp;&nbsp;
-                <a href="https://www.youtube.com/channel/UCrnE5dRXQiagYp3GqKyX3kw"><i class="fa-brands fa-youtube"></i></a>&nbsp;&nbsp; -->
-                <!-- <a href="https://www.cloudskillsboost.google/public_profiles/3d867afc-e694-4396-9afc-0c5e8bda5f5f"><i class="fa-brands fa-google"></i></a> -->
-                
-             </div>
-             <a href="images/DeepResume.pdf" download class="btn2">Download Resume</a>
-          </div>
-          <div class="contact-right">
-              <form name="submit-to-google-sheet">
-                <input type="text" name = "Name" placeholder="Your Name" required>
-                <input type="email" name= "Email" placeholder="Your Email" required>
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="submit_btn" >Submit</button>
-              </form>
-              <span id="success_message"></span>
+      <div class="row">
 
+        <!-- Contact-left -->
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-envelope"></i> 2003deepdeep@gmail.com</p>
+          <p><i class="fa-solid fa-phone-volume"></i> +91 9876543210</p>
+
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/deep-332437315/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Deep841" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
           </div>
+
+          <a href="images/DeepResume.pdf" download class="btn2">Download Resume</a>
         </div>
-    </div> 
-    <div class="copyright">
-        <p>Coppyright © <span>Deep</span> . Made with&nbsp; <i class="fas fa-heart"></i>&nbsp;&nbsp;by&nbsp;Deep</p>
+
+        <!-- Contact-right -->
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="submit_btn">Submit</button>
+          </form>
+          <span id="success_message"></span>
+        </div>
+      </div>
     </div>
-  </div>
 
+    <footer class="copyright">
+      <p>Copyright&nbsp;© <span>Deep</span>. Made with <i class="fas fa-heart"></i> by Deep</p>
+    </footer>
+  </section>
 
-
-
-
-
-  
-
-
-
-
-
-    
+  <!-- ===== SCRIPTS ===== -->
   <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-      
-      function opentab(tabName)
-      {
-          for(i of tablinks){
-              i.classList.remove("active-link")
-          }
+    /* ---------- Tabs ---------- */
+    const tablinks   = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
 
-          for(j of tabcontents){
-              j.classList.remove("active-tab")
-          }
+    function opentab(tabName) {
+      for (let link of tablinks)    { link.classList.remove("active-link"); }
+      for (let tab  of tabcontents) { tab.classList.remove("active-tab");   }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabName).classList.add("active-tab");
+    }
 
-          event.currentTarget.classList.add("active-link")
-          document.getElementById(tabName).classList.add("active-tab")
-      }
+    /* ---------- Mobile nav ---------- */
+    const sidemenu = document.getElementById("sidemenu");
+    function openmenu()  { sidemenu.style.right = "0"; }
+    function closemenu() { sidemenu.style.right = "-200px"; }
 
-   </script>
+    /* ---------- Google Sheets contact form ---------- */
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyJTTl_Si1to7hN4SMe6q7bgpIcS_R6nInRB_afAiqnNhIUiVWWQ2fhO8lGcpIFTTA5/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const successMsg = document.getElementById("success_message");
 
-
-   <script>
-      var sidemenu = document.getElementById("sidemenu");
-
-      function openmenu(){
-        sidemenu.style.right = "0";
-      } 
-      function closemenu(){
-        sidemenu.style.right = "-200px";
-      } 
-
-   </script>
-
-
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyJTTl_Si1to7hN4SMe6q7bgpIcS_R6nInRB_afAiqnNhIUiVWWQ2fhO8lGcpIFTTA5/exec'
-      const form = document.forms['submit-to-google-sheet']
-
-      const successMessage = document.getElementById("success_message")
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            successMessage.innerHTML = "Thankyou for contacting Me ,&nbsp;Will respond ASAP!"
-            setTimeout(function(){
-              successMessage.innerHTML = ""
-            },5000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-      })
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(() => {
+          successMsg.textContent = "Thank you for contacting me. I will respond ASAP!";
+          setTimeout(() => successMsg.textContent = "", 5000);
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
   </script>
 
 </body>
 </html>
-
-<!-- Thankyou for contacting Me ,&nbsp;Will respond ASAP! -->
-
-
-
-
