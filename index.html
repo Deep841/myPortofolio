@@ -1,102 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deep | Portfolio</title>
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css" /><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deep | Portfolio</title>
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/7a5bf939ff.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7a5bf939ff.js" crossorigin="anonymous" defer></script>
 
   <!-- Google Fonts (Poppins) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Deep — MCA student and ML Engineer. Projects: NLP summarizer, E-commerce analytics, Medical AI Chatbot, Smart Fitness and more." />
 </head>
 
 <body>
 
   <!-- ===== HEADER ===== -->
   <header id="header">
-    <div class="container">
-      <nav class="navbar">
-        <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificate_section">Certificates</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    <div class="container header-inner">
+      <nav class="navbar" aria-label="Primary">
+        <div class="brand">
+          <a href="#header" class="brand-link">
+            <span class="brand-name">&lt; Deep /&gt;</span>
+            <span class="brand-sub">AI · ML · Data</span>
+          </a>
+        </div>
+
+        <ul id="sidemenu" class="nav-links" role="menubar" aria-hidden="false">
+          <li role="none"><a role="menuitem" href="#header">Home</a></li>
+          <li role="none"><a role="menuitem" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" href="#certificate_section">Certificates</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          <button class="icon-btn close-menu" onclick="closemenu()" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </ul>
-        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+        <button class="icon-btn open-menu" onclick="openmenu()" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
 
       <div class="header-text">
         <h2>&lt; AI / ML &gt;</h2>
-        <h3>Hi, I'm&nbsp;<span>Deep</span><br>Welcome to my Portfolio Website</h3>
+        <h1>Hi, I'm <span>Deep</span></h1>
+        <p class="lead">MCA student at Thapar Institute of Engineering & Technology — building ML systems & data products.</p>
+        <div class="header-ctas">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="images/DeepResume.pdf" download>Download Resume</a>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- ===== ABOUT ===== -->
-  <section id="about">
+  <section id="about" class="section about-section">
     <div class="container">
-      <div class="row">
+      <div class="row about-row">
         <div class="about-col-1">
-          <img src="images/bg.png" alt="Profile image">
+          <img src="images/bg.png" alt="Deep — profile photo" class="profile-img">
         </div>
 
         <div class="about-col-2">
           <h2 class="section-title">About Me</h2>
           <p class="about-description">
-            Insightful postgraduate student looking forward to joining a reputed organisation in order to utilise my
-            learning, skills and work for the betterment of the company where I can serve as a valuable person.
+            Insightful postgraduate (MCA) with strong foundations in Machine Learning, Natural Language Processing and Data Analytics.
+            I enjoy building end-to-end ML systems — from data ingestion and modelling to deployment and monitoring.
+            Currently seeking opportunities to apply practical ML & software engineering skills in real-world products.
           </p>
 
           <!-- Tabs -->
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
+          <div class="tab-titles" role="tablist" aria-label="Profile sections">
+            <button class="tab-links active-link" onclick="opentab('skills')" role="tab" aria-selected="true">Skills</button>
+            <button class="tab-links" onclick="opentab('experience')" role="tab">Experience</button>
+            <button class="tab-links" onclick="opentab('education')" role="tab">Education</button>
           </div>
 
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>Programming</span><p>C++, Python, SQL | familiar: Java, R</p></li>
-              <li><span>UI Technologies</span><p>R Shiny, shinydashboard | familiar: Jetpack Compose</p></li>
-              <li><span>Databases</span><p>MySQL Workbench | familiar: CSV/Excel, MongoDB</p></li>
-              <li><span>Libraries</span><p>NumPy, Pandas, Matplotlib, Seaborn | familiar: MediaPipe, OpenCV, PaddleOCR, TextBlob, pyttsx3, SpeechRecognition</p></li>
-              <li><span>Tools</span><p>Jupyter Notebook, GitHub, VS Code</p></li>
+          <!-- Skills (REPLACE with resume-based skills) -->
+          <div class="tab-contents active-tab" id="skills" role="tabpanel">
+            <ul class="skills-list">
+              <li><strong>Programming:</strong> C++, Python, SQL</li>
+              <li><strong>Tools & Platforms:</strong> VS Code, Jupyter, Git/GitHub, Docker, FastAPI</li>
+              <li><strong>Data & Visualization:</strong> Pandas, NumPy, Matplotlib, Seaborn, Plotly, Power BI</li>
+              <li><strong>ML & NLP:</strong> scikit-learn, Random Forest, Linear/Logistic Regression, KNN, NLTK</li>
+              <li><strong>Core CS:</strong> OOP, Software Engineering, DBMS</li>
             </ul>
           </div>
 
-          <div class="tab-contents" id="experience">
-            <ul>
+          <!-- Experience (resume-based internship description) -->
+          <div class="tab-contents" id="experience" role="tabpanel" aria-hidden="true">
+            <h3 class="subheading">Machine Learning Intern — Cognifyz Technology (Remote)</h3>
+            <p class="muted">Jan 2025 – Feb 2025</p>
+            <ul class="experience-list">
+              <li>Executed three end-to-end ML projects in the restaurant domain covering regression, recommendation, and classification with complete data preprocessing and model evaluation.</li>
+              <li>Built a rating prediction model using Linear Regression and Decision Tree Regressor (achieved R² ≈ 0.98) with careful feature engineering and evaluation.</li>
+              <li>Developed a cuisine-based recommender using one-hot encoding and Jaccard similarity for item matching and a cuisine classification model using Decision Tree Classifier, addressing class imbalance and optimization through encoding and normalization.</li>
+            </ul>
+          </div>
+
+          <!-- Education (MCA only as requested) -->
+          <div class="tab-contents" id="education" role="tabpanel" aria-hidden="true">
+            <ul class="education-list">
               <li>
-                <span>Machine Learning Intern</span>
-                <p>Cognifyz Technology —
-                <a href="https://github.com/Deep841/Cognifyz_Internship_Tasks_ML" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> Project Repo
-                </a></p>
+                <span class="edu-title">Master of Computer Applications (MCA)</span>
+                <p>Thapar Institute of Engineering & Technology, Patiala — Aug 2024 – May 2026</p>
+                <p>CGPA: <strong>8.18</strong></p>
               </li>
-            </ul>
-          </div>
-
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>MCA (2024-26)</span><p>Thapar Institute of Engineering & Technology, Patiala</p></li>
-              <li><span>B.Sc. (2021-24)</span><p>Kurukshetra University — Non-Medical</p></li>
-              <li><span>Senior Secondary (2021)</span><p>The Century School, Haryana</p></li>
-              <li><span>High School (2019)</span><p>Pratap Public School, Karnal</p></li>
             </ul>
           </div>
         </div>
@@ -105,49 +118,48 @@
   </section>
 
   <!-- ===== PROJECTS ===== -->
-  <section id="projects">
+  <section id="projects" class="section projects-section">
     <div class="container">
       <header class="section-header">
-        <h1 class="section-title">Projects</h1>
-        <p class="section-subtitle">A comprehensive showcase of my development journey through AI, web development, and innovative solutions</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A curated snapshot of practical work across AI, web and data analytics.</p>
       </header>
 
       <div class="projects-grid">
 
-              <!-- NLP Text Summarizer with MLOps -->
-      <article class="project-card">
-        <div class="project-icon">
-          <i class="fa-solid fa-brain"></i>
-        </div>
-        <div class="project-content">
-          <h2 class="project-title">NLP Text Summarizer with MLOps</h2>
-          <div class="project-description">
-            <p>End-to-end Natural Language Processing project implementing text summarization using the PEGASUS transformer model, integrated with a complete MLOps pipeline for data ingestion, model training, evaluation, and deployment.</p>
-            <div class="tech-stack">
-              <strong>Tech Stack:</strong> Python, Transformers (PEGASUS), Hugging Face, PyTorch, MLflow, DVC, Docker, CI/CD, Flask
+        <!-- NLP Text Summarizer with MLOps (UPDATED) -->
+        <article class="project-card">
+          <div class="project-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="project-content">
+            <h3 class="project-title">NLP Text Summarizer with MLOps</h3>
+            <div class="project-description">
+              <p>End-to-end text summarization pipeline built using the PEGASUS transformer. The project includes automated data ingestion, preprocessing, model training and experiment tracking using DVC and MLflow, and a containerized FastAPI service for real-time summarization.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> Python, Transformers (PEGASUS), FastAPI, Docker, DVC, MLflow, PyTorch</div>
+              <ul class="project-bullets">
+                <li>Training pipeline with reproducible experiments and artifacts tracked via DVC + MLflow.</li>
+                <li>REST API for low-latency summarization; Dockerized for portability and scalable deployment.</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Deep841/Text-Summarizer-with-MLOps" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View on GitHub
+              </a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/Deep841/Text-Summarizer-with-MLOps" target="_blank" class="project-link">
-              <i class="fas fa-external-link-alt"></i> View on GitHub
-            </a>
-          </div>
-        </div>
-      </article>
+        </article>
 
-        
-        <!-- E-commerce Sales Analytics -->
+        <!-- E-commerce Sales Analytics (UPDATED) -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
           <div class="project-content">
-            <h2 class="project-title">E-commerce Sales Analytics</h2>
+            <h3 class="project-title">E-commerce Sales Analytics Dashboard</h3>
             <div class="project-description">
-              <p>Comprehensive data analytics platform featuring interactive dashboards for sales analysis by category, customer segments, regional performance, and time-based trends using advanced BI tools and database management.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> Power BI, MySQL, DAX, Power Query, Data Visualization, Statistical Analysis
-              </div>
+              <p>Interactive Power BI dashboard analysing YTD sales, profit margins, category and regional performance from a 100K+ record dataset. Data modelling and transformation were implemented in MS SQL Server and Power Query to support performant visuals and dynamic KPIs.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> Power BI, MS SQL Server, DAX, Power Query, Data Modeling</div>
+              <ul class="project-bullets">
+                <li>Built dynamic KPIs, trend visuals (YoY), Top/Bottom product analysis and state-wise insights.</li>
+                <li>Integrated large datasets with ETL and optimized visuals for executive-level reporting.</li>
+              </ul>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/ecommerce-sales-analytics" target="_blank" class="project-link">
@@ -157,39 +169,18 @@
           </div>
         </article>
 
-        <!-- AI Ticket Management System -->
+        <!-- Medical AI Chatbot (UPDATED) -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-ticket"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-stethoscope"></i></div>
           <div class="project-content">
-            <h2 class="project-title">AI-Powered Ticket Management</h2>
+            <h3 class="project-title">End-to-End Medical AI Chatbot</h3>
             <div class="project-description">
-              <p>Intelligent support system leveraging machine learning to automatically categorize, prioritize, and assign tickets with role-based access control, email workflows, and sentiment analysis for enhanced customer service.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> Node.js, Express.js, MongoDB, JWT Authentication, Gemini AI API, Nodemailer, Machine Learning
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Deep841/AI-ticket-system" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> View on GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Medical AI Chatbot -->
-        <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-stethoscope"></i>
-          </div>
-          <div class="project-content">
-            <h2 class="project-title">Medical AI Chatbot</h2>
-            <div class="project-description">
-              <p>End-to-end AI-powered medical assistant utilizing vector databases and Large Language Models to provide accurate health-related responses from medical knowledge bases with semantic search and natural language processing.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> Python, LangChain, Hugging Face Transformers, Pinecone Vector DB, Flask, FLAN-T5, PDF Processing
-              </div>
+              <p>RAG-based medical assistant leveraging LangChain, Hugging Face embeddings and Pinecone for reliable, context-aware answers using The Gale Encyclopedia of Medicine as the knowledge source. A Flask web app provides secure interaction with the model for real-time queries.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> Python, LangChain, Hugging Face, Pinecone, Flask, PDF Processing</div>
+              <ul class="project-bullets">
+                <li>Implemented semantic retrieval with vector embeddings and RAG for accurate domain-specific responses.</li>
+                <li>Designed a Flask front-end for real-time user queries and safe API key management.</li>
+              </ul>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/medical-ai-chatbot" target="_blank" class="project-link">
@@ -201,16 +192,12 @@
 
         <!-- Smart Fitness Insights -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-dumbbell"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-dumbbell"></i></div>
           <div class="project-content">
-            <h2 class="project-title">Smart Fitness Insights</h2>
+            <h3 class="project-title">Smart Fitness Insights</h3>
             <div class="project-description">
-              <p>AI-powered fitness dashboard built with R Shiny to monitor health metrics, analyze activity patterns, and deliver personalized workout and lifestyle recommendations in real time.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> R, Shiny Framework, ggplot2, Plotly, Random Forest, Isolation Forest, Collaborative Filtering, Data Mining
-              </div>
+              <p>AI-powered fitness dashboard built with R Shiny to monitor health metrics, analyze activity patterns, and deliver personalized workout and lifestyle recommendations.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> R, Shiny, ggplot2, Plotly, Random Forest, Isolation Forest</div>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/Smart-Fitness-Insights" target="_blank" class="project-link">
@@ -222,16 +209,12 @@
 
         <!-- Blood Management System -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-droplet"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-droplet"></i></div>
           <div class="project-content">
-            <h2 class="project-title">Blood Management System</h2>
+            <h3 class="project-title">Blood Management System</h3>
             <div class="project-description">
-              <p>Comprehensive web-based platform enabling secure donor-recipient matching, inventory management, and automated email-driven blood request handling within university and healthcare settings.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript ES6, Node.js, Express.js, MongoDB, RESTful APIs, Email Integration
-              </div>
+              <p>University-focused blood donor-recipient matching platform with secure role-based access, email-driven requests and donor management features.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, Node.js, Express.js, MongoDB, Nodemailer</div>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/Blood-Management-System" target="_blank" class="project-link">
@@ -243,16 +226,12 @@
 
         <!-- Sentiment Analysis -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-comments"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-comments"></i></div>
           <div class="project-content">
-            <h2 class="project-title">Sentiment Analysis</h2>
+            <h3 class="project-title">Sentiment Analysis</h3>
             <div class="project-description">
-              <p>Developed an AI-powered system that analyzes speech sentiment and visualizes emotional tone using NLP and data visualization techniques.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> Python, NLTK (VADER), Google Speech Recognition, Matplotlib
-              </div>
+              <p>Speech sentiment analysis and visualization using NLP techniques and audio transcription pipelines.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> Python, NLTK (VADER), Google Speech Recognition, Matplotlib</div>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/Sentiment-Analysis" target="_blank" class="project-link">
@@ -264,16 +243,12 @@
 
         <!-- Talk Lens -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-glasses"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-glasses"></i></div>
           <div class="project-content">
-            <h2 class="project-title">Talk Lens <span class="project-status">Ongoing</span></h2>
+            <h3 class="project-title">Talk Lens <span class="project-status">Ongoing</span></h3>
             <div class="project-description">
-              <p>Revolutionary AI-powered smart glasses system that reads and translates text aloud based on intuitive hand gestures, combining computer vision, OCR, and IoT technologies for accessibility solutions.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> Python, MediaPipe, PaddleOCR, OpenCV, pyttsx3, ESP32 Microcontroller, Arducam, 3D Printing, IoT
-              </div>
+              <p>AI-powered smart glasses that read and translate text aloud based on hand gestures — integrating computer vision, OCR and low-power IoT for accessibility.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> Python, MediaPipe, PaddleOCR, OpenCV, ESP32, Arducam</div>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/Talk-Lens" target="_blank" class="project-link">
@@ -285,16 +260,12 @@
 
         <!-- Handwritten Equation Solver -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-square-root-variable"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-square-root-variable"></i></div>
           <div class="project-content">
-            <h2 class="project-title">Handwritten Equation Solver</h2>
+            <h3 class="project-title">Handwritten Equation Solver</h3>
             <div class="project-description">
-              <p>Advanced computer vision system that accurately detects, recognizes, and solves handwritten mathematical equations in real-time using deep learning, OCR technology, and mathematical parsing algorithms.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> Python, OpenCV, Convolutional Neural Networks, PaddleOCR, TensorFlow, Mathematical Expression Parsing
-              </div>
+              <p>Real-time detection, recognition and solving of handwritten mathematical equations using deep learning and OCR.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> Python, OpenCV, CNNs, PaddleOCR, TensorFlow</div>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/Solve-HandWritten-Equation" target="_blank" class="project-link">
@@ -304,18 +275,14 @@
           </div>
         </article>
 
-        <!-- Encoder Decoder App -->
+        <!-- Encoder-Decoder App -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-mobile-screen"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-mobile-screen"></i></div>
           <div class="project-content">
-            <h2 class="project-title">Encoder - Decoder Mobile App</h2>
+            <h3 class="project-title">Encoder - Decoder Mobile App</h3>
             <div class="project-description">
-              <p>Secure Android application for text encoding and decoding operations built with modern Android development practices, featuring intuitive UI and multiple encryption algorithms.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> Kotlin, Jetpack Compose, Android Studio, Material Design, Cryptography, Mobile Development
-              </div>
+              <p>Android app for secure text encoding/decoding using modern Android development practices and cryptographic techniques.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> Kotlin, Jetpack Compose, Android Studio</div>
             </div>
             <div class="project-links">
               <a href="https://github.com/Deep841/App_Development" target="_blank" class="project-link">
@@ -327,19 +294,12 @@
 
         <!-- Planet Fitness Website -->
         <article class="project-card">
-          <div class="project-icon">
-            <i class="fa-solid fa-dumbbell"></i>
-          </div>
+          <div class="project-icon"><i class="fa-solid fa-dumbbell"></i></div>
           <div class="project-content">
-            <h2 class="project-title">Planet Fitness & Spa Website</h2>
+            <h3 class="project-title">Planet Fitness &amp; Spa Website</h3>
             <div class="project-description">
-              <p>Professional responsive fitness website featuring modern design, Instagram API integration, contact management system, and optimized user experience for both desktop and mobile platforms.</p>
-              <div class="tech-stack">
-                <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript ES6, Responsive Design, API Integration, Mobile Optimization, SEO
-              </div>
-              <div class="live-demo">
-                <strong>Live Site:</strong> <a href="https://deep841.github.io/Planet-Fitness/" target="_blank" class="demo-link">https://deep841.github.io/Planet-Fitness/</a>
-              </div>
+              <p>Responsive fitness website featuring modern design, Instagram API integration and optimized user experience for desktop and mobile.</p>
+              <div class="tech-stack"><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript</div>
             </div>
             <div class="project-links">
               <a href="https://deep841.github.io/Planet-Fitness/" target="_blank" class="project-link demo">
@@ -357,12 +317,11 @@
   </section>
 
   <!-- ===== CERTIFICATES ===== -->
-  <section id="certificate_section">
+  <section id="certificate_section" class="section certificate-section">
     <div class="container">
-      <h1 class="section-title">Certificates</h1>
+      <h2 class="section-title">Certificates</h2>
 
       <div class="certificate-grid">
-
         <!-- Android App Dev -->
         <article class="certificate-card">
           <img src="images/googlecloud.png" alt="Android App Dev">
@@ -385,7 +344,7 @@
           </div>
         </article>
 
-        <!-- Kaggle: Intro to ML -->
+        <!-- Kaggle: Intro to ML (resume certificate) -->
         <article class="certificate-card">
           <img src="images/kaggle.png" alt="Kaggle">
           <div class="certificate-content">
@@ -407,7 +366,7 @@
           </div>
         </article>
 
-        <!-- Deloitte Simulation -->
+        <!-- Deloitte Simulation (resume certificate) -->
         <article class="certificate-card">
           <img src="images/forage.png" alt="Deloitte">
           <div class="certificate-content">
@@ -418,7 +377,7 @@
           </div>
         </article>
 
-        <!-- Tata GenAI -->
+        <!-- Tata GenAI (resume certificate) -->
         <article class="certificate-card">
           <img src="images/forage.png" alt="Tata GenAI">
           <div class="certificate-content">
@@ -428,7 +387,6 @@
             </a>
           </div>
         </article>
-
       </div>
 
       <div class="section-footer">
@@ -438,21 +396,21 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact">
+  <section id="contact" class="section contact-section">
     <div class="container">
-      <div class="row">
+      <div class="row contact-row">
 
         <!-- Contact-left -->
         <div class="contact-left">
-          <h1 class="section-title">Contact Me</h1>
+          <h2 class="section-title">Contact Me</h2>
           <div class="contact-info">
-            <p><i class="fa-solid fa-envelope"></i> 2003deepdeep@gmail.com</p>
-            <p><i class="fa-solid fa-phone-volume"></i> +91 9876543210</p>
+            <p><i class="fa-solid fa-envelope"></i> kumardeep2003@gmail.com</p>
+            <p><i class="fa-solid fa-phone-volume"></i> +91 8278279630</p>
           </div>
 
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/deep-332437315/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Deep841" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/deep-332437315/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Deep841" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
           </div>
 
           <a href="images/DeepResume.pdf" download class="btn2">Download Resume</a>
@@ -466,7 +424,7 @@
             <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
             <button type="submit" class="submit_btn">Send Message</button>
           </form>
-          <span id="success_message"></span>
+          <span id="success_message" aria-live="polite"></span>
         </div>
       </div>
     </div>
@@ -483,36 +441,45 @@
     const tabcontents = document.getElementsByClassName("tab-contents");
 
     function opentab(tabName) {
-      for (let link of tablinks)    { link.classList.remove("active-link"); }
-      for (let tab  of tabcontents) { tab.classList.remove("active-tab");   }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabName).classList.add("active-tab");
+      for (let link of tablinks)    { link.classList.remove("active-link"); link.setAttribute('aria-selected','false'); }
+      for (let tab  of tabcontents) { tab.classList.remove("active-tab"); tab.setAttribute('aria-hidden','true'); }
+      // event may be undefined for keyboard invocation; use this fallback
+      const current = (typeof event !== 'undefined' && event.currentTarget) ? event.currentTarget : document.querySelector(`[onclick="opentab('${tabName}')"]`);
+      if (current) { current.classList.add("active-link"); current.setAttribute('aria-selected','true'); }
+      const target = document.getElementById(tabName);
+      if (target) { target.classList.add("active-tab"); target.setAttribute('aria-hidden','false'); }
     }
 
     /* ---------- Mobile nav ---------- */
     const sidemenu = document.getElementById("sidemenu");
-    function openmenu()  { sidemenu.style.right = "0"; }
-    function closemenu() { sidemenu.style.right = "-200px"; }
+    function openmenu()  { sidemenu.style.right = "0"; sidemenu.setAttribute('aria-hidden','false'); }
+    function closemenu() { sidemenu.style.right = "-260px"; sidemenu.setAttribute('aria-hidden','true'); }
 
     /* ---------- Google Sheets contact form ---------- */
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyJTTl_Si1to7hN4SMe6q7bgpIcS_R6nInRB_afAiqnNhIUiVWWQ2fhO8lGcpIFTTA5/exec';
     const form = document.forms['submit-to-google-sheet'];
     const successMsg = document.getElementById("success_message");
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(() => {
-          successMsg.textContent = "Thank you for contacting me. I will respond ASAP!";
-          setTimeout(() => successMsg.textContent = "", 5000);
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
-    });
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(() => {
+            successMsg.textContent = "Thank you for contacting me. I will respond ASAP!";
+            setTimeout(() => successMsg.textContent = "", 5000);
+            form.reset();
+          })
+          .catch(error => {
+            console.error('Error!', error.message);
+            successMsg.textContent = "Oops — something went wrong. Try again later.";
+            setTimeout(() => successMsg.textContent = "", 5000);
+          });
+      });
+    }
 
     /* ---------- Smooth animations on scroll ---------- */
     const observerOptions = {
-      threshold: 0.1,
+      threshold: 0.12,
       rootMargin: '0px 0px -50px 0px'
     };
 
@@ -525,20 +492,22 @@
       });
     }, observerOptions);
 
-    // Observe project cards
-    document.querySelectorAll('.project-card').forEach(card => {
+    document.querySelectorAll('.project-card, .certificate-card').forEach((card, i) => {
       card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
+      card.style.transform = 'translateY(20px)';
       card.style.transition = 'all 0.6s ease';
       observer.observe(card);
     });
-  </script>
 
+    // Close menu when clicking outside on small screens
+    document.addEventListener('click', (e) => {
+      const menuOpen = sidemenu && sidemenu.style.right === '0px';
+      const isClickInsideMenu = sidemenu && sidemenu.contains(e.target);
+      const isMenuButton = e.target.closest('.open-menu');
+      if (menuOpen && !isClickInsideMenu && !isMenuButton) {
+        closemenu();
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
