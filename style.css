@@ -105,20 +105,40 @@ img {
    HEADER
    ============================================================================================ */
 
+/* HEADER SECTION FIXED */
 #header {
   height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background: none;
+  overflow: hidden;
 }
 
+/* Background Image */
 #header::before {
   content: '';
   position: absolute;
   inset: 0;
   background: url("images/home3.png") center/cover no-repeat;
-  opacity: 0.15;
+  z-index: 1;
+  opacity: 1; /* full image without tint */
+}
+
+/* Add subtle dark overlay for readability */
+#header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* transparent overlay */
+  z-index: 2;
+}
+
+/* Bring text above overlays */
+.header-text {
+  position: relative;
+  z-index: 3;
 }
 
 /* ===== NAVBAR ===== */
@@ -543,3 +563,4 @@ copyright {
 .certificate-card {
   animation: fadeUp 0.6s ease forwards;
 }
+
