@@ -185,6 +185,7 @@ body {
   z-index: 3;
   text-align: center;
   width: 100%;
+  padding-top: 80px;
 }
 
 .hero-tag {
@@ -227,17 +228,17 @@ body {
    ABOUT
    ============================================================================================ */
 
-#about { background: transparent; }
+#about { background: transparent; padding: 60px 0; }
 
 .about-row { display: flex; gap: 60px; align-items: flex-start; flex-wrap: wrap; }
 .about-col-1 { flex: 0 0 auto; }
 .about-col-2 { flex: 1; min-width: 280px; }
 
 .profile-img {
-  width: 280px;
-  height: 280px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.12);
   border: 1px solid rgba(0,0,0,0.06);
 }
