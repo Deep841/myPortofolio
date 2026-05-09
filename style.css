@@ -605,3 +605,65 @@ copyright {
   display: block;
   margin-bottom: 4px;
 }
+
+/* ============================================================================================
+   HERO LAYOUT — text left, image right
+   ============================================================================================ */
+
+.hero-layout {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+.hero-layout .header-text {
+  text-align: left;
+  flex: 1;
+}
+
+.hero-layout .header-ctas {
+  justify-content: flex-start;
+}
+
+.hero-tag {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #f39c12;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-img-wrap {
+  flex-shrink: 0;
+}
+
+.hero-img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.3);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 900px) {
+  .hero-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-layout .header-text {
+    text-align: center;
+  }
+  .hero-layout .header-ctas {
+    justify-content: center;
+  }
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+}
