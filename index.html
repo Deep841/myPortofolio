@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deep | AI/ML &amp; Backend Engineer</title>
 
+  <script>
+    try {
+      const themes = ['cerulean', 'aubergine', 'mocha'];
+      const requestedTheme = new URLSearchParams(location.search).get('theme');
+      const savedTheme = localStorage.getItem('theme');
+      const theme = themes.includes(requestedTheme) ? requestedTheme : savedTheme;
+      if (themes.includes(theme)) {
+        document.documentElement.dataset.theme = theme;
+        if (requestedTheme === theme) localStorage.setItem('theme', theme);
+      }
+    } catch {}
+  </script>
+
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
@@ -24,43 +37,46 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <nav class="navbar" aria-label="Primary">
+    <a href="#header" class="brand-link" aria-label="Deep home">
+      <span class="brand-name">Deep<span class="brand-dot" aria-hidden="true"></span></span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-resume btn-dark" href="images/DeepResume.pdf" download>Resume</a>
+      <button class="icon-btn open-menu" type="button" aria-label="Open navigation" aria-controls="sidemenu" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </nav>
+
+  <ul id="sidemenu" class="nav-links" aria-hidden="false">
+    <li><a href="#header">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificate_section">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="close-menu-item">
+      <button class="icon-btn close-menu" type="button" aria-label="Close navigation">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </li>
+  </ul>
+  <button class="nav-overlay" type="button" aria-label="Close navigation"></button>
+
+  <!-- ===== HEADER / HERO ===== -->
   <header id="header">
-    <div class="container header-inner">
-      <nav class="navbar" aria-label="Primary">
-        <div class="brand">
-          <a href="#header" class="brand-link">
-            <span class="brand-name"> Deep </span>
-            <!-- <span class="brand-sub">AI · ML · Data</span> -->
-          </a>
-        </div>
-
-        <button class="icon-btn open-menu" onclick="openmenu()" aria-label="Open menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </nav>
-
-      <ul id="sidemenu" class="nav-links" aria-hidden="true">
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificate_section">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="close-menu-item">
-          <button class="icon-btn close-menu" onclick="closemenu()" aria-label="Close menu">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </li>
-      </ul>
-
+    <div class="container hero-layout">
       <div class="header-text">
-        <!-- <p class="hero-tag">Python · GenAI · Backend</p> -->
+        <p class="hero-tag">Python · GenAI · Backend</p>
         <h1>Hi, I'm <span>Deep</span></h1>
         <p class="lead">Software Engineer @ Mphasis · MCA, Thapar Institute<br>Building GenAI systems, NLP pipelines &amp; backend products end-to-end.</p>
         <div class="header-ctas">
           <a class="btn-dark" href="#projects">View Projects</a>
           <a class="btn" href="images/DeepResume.pdf" download>Download Resume</a>
         </div>
+      </div>
+      <div class="hero-portrait-wrap">
+        <img class="hero-portrait" src="images/home3.png" alt="Deep" width="1179" height="966" fetchpriority="high">
       </div>
     </div>
   </header>
@@ -101,14 +117,14 @@
             <h3 class="subheading">Software Engineer — Mphasis Limited</h3>
             <p class="muted">Nov 2026 – Present</p>
             <h3 class="subheading" style="margin-top:20px">Trainee Software Engineer (Intern) — Mphasis Limited</h3>
-            <p class="muted">Feb 2026 – May 2026 &nbsp;&middot;&nbsp; <a href="https://github.com/Deep841/QuantumLogic_Labs" target="_blank" rel="noopener noreferrer" style="color:#6366f1;text-decoration:none;">GitHub &#8599;</a></p>
+            <p class="muted">Feb 2026 – May 2026 &nbsp;&middot;&nbsp; <a href="https://github.com/Deep841/QuantumLogic_Labs" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a></p>
             <ul class="experience-list">
               <li>Built a full-stack AI-powered ATS (QuantumLogic Labs) using Python, FastAPI, React, and PostgreSQL — automating resume parsing, hybrid candidate scoring, interview scheduling, and end-to-end hiring workflows.</li>
               <li>Engineered a hybrid AI scoring engine combining Semantic Similarity, BM25 TF-IDF, skill-taxonomy matching (80+ skills), and experience relevance scoring — reduced manual screening time by ~60% (est.).</li>
               <li>Implemented enterprise features: Google OAuth2, JWT auth, recruiter analytics dashboard, JD optimiser, automated email notifications, and immutable audit logging; delivered in Agile sprint cycles.</li>
             </ul>
             <h3 class="subheading" style="margin-top:20px">Machine Learning Intern — Cognifyz Technology (Remote)</h3>
-            <p class="muted">Jan 2025 – Feb 2025 &nbsp;&middot;&nbsp; <a href="https://github.com/Deep841/Cognifyz_Internship_Tasks_ML" target="_blank" rel="noopener noreferrer" style="color:#6366f1;text-decoration:none;">GitHub &#8599;</a></p>
+            <p class="muted">Jan 2025 – Feb 2025 &nbsp;&middot;&nbsp; <a href="https://github.com/Deep841/Cognifyz_Internship_Tasks_ML" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a></p>
             <ul class="experience-list">
               <li>Built restaurant-rating prediction models (Linear Regression, Decision Tree) achieving R&sup2; = 0.98 and reducing RMSE by 35% through feature engineering, target encoding, and normalisation; tracked all experiments in MLflow.</li>
               <li>Developed a content-based recommendation system using Jaccard similarity (Precision@5 improved ~28%) and exposed it via a documented REST API for real-time inference.</li>
@@ -183,11 +199,11 @@
               <a href="https://medibot-w7u1.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link demo">
                 <i class="fas fa-external-link-alt"></i> Live Demo
               </a>
-              <span class="muted">Demo may take ~30–60s to wake up</span>
               <a href="https://github.com/Deep841/medical-ai-chatbot" target="_blank" rel="noopener noreferrer" class="project-link">
                 <i class="fas fa-external-link-alt"></i> View on GitHub
               </a>
             </div>
+            <p class="demo-note">Demo may take ~30–60s to wake up</p>
           </div>
         </article>
 
@@ -226,44 +242,6 @@
           </div>
         </article>
 
-        <!-- E-Commerce Sales Analytics -->
-        <article class="project-card">
-          <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <div class="project-content">
-            <h3 class="project-title">E-Commerce Sales Analytics Dashboard</h3>
-            <div class="project-description">
-              <p>Automated ETL pipelines processing 100K+ sales records using MS SQL Server and Power Query; data modelled into a Star Schema (fact + dimension tables) for scalable analytical querying.</p>
-              <div class="tech-stack"><strong>Tech Stack:</strong> Power BI, MS SQL Server, DAX, Power Query, Star Schema, ETL</div>
-              <ul class="project-bullets">
-                <li>DAX measures and time-intelligence calculations for YTD Sales, Profit, YoY Growth, and KPI tracking.</li>
-                <li>Interactive dashboards for category-wise, region-wise, and shipping-performance analytics.</li>
-              </ul>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Deep841/ecommerce-sales-analytics" target="_blank" rel="noopener noreferrer" class="project-link">
-                <i class="fas fa-external-link-alt"></i> View on GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Smart Fitness Insights -->
-        <article class="project-card">
-          <div class="project-icon"><i class="fa-solid fa-dumbbell"></i></div>
-          <div class="project-content">
-            <h3 class="project-title">Smart Fitness Insights</h3>
-            <div class="project-description">
-              <p>AI-powered fitness dashboard built with R Shiny to monitor health metrics, analyze activity patterns, and deliver personalized workout and lifestyle recommendations.</p>
-              <div class="tech-stack"><strong>Tech Stack:</strong> R, Shiny, ggplot2, Plotly, Random Forest, Isolation Forest</div>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Deep841/Smart-Fitness-Insights" target="_blank" rel="noopener noreferrer" class="project-link">
-                <i class="fas fa-external-link-alt"></i> View on GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
         <!-- Talk Lens -->
         <article class="project-card">
           <div class="project-icon"><i class="fa-solid fa-glasses"></i></div>
@@ -298,8 +276,49 @@
           </div>
         </article>
 
-        <details>
-          <summary>More projects</summary>
+      </div>
+
+      <details class="more-projects">
+        <summary>Show more projects</summary>
+        <div class="projects-grid">
+          <!-- E-Commerce Sales Analytics -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="project-content">
+              <h3 class="project-title">E-Commerce Sales Analytics Dashboard</h3>
+              <div class="project-description">
+                <p>Automated ETL pipelines processing 100K+ sales records using MS SQL Server and Power Query; data modelled into a Star Schema (fact + dimension tables) for scalable analytical querying.</p>
+                <div class="tech-stack"><strong>Tech Stack:</strong> Power BI, MS SQL Server, DAX, Power Query, Star Schema, ETL</div>
+                <ul class="project-bullets">
+                  <li>DAX measures and time-intelligence calculations for YTD Sales, Profit, YoY Growth, and KPI tracking.</li>
+                  <li>Interactive dashboards for category-wise, region-wise, and shipping-performance analytics.</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Deep841/ecommerce-sales-analytics" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Smart Fitness Insights -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="project-content">
+              <h3 class="project-title">Smart Fitness Insights</h3>
+              <div class="project-description">
+                <p>AI-powered fitness dashboard built with R Shiny to monitor health metrics, analyze activity patterns, and deliver personalized workout and lifestyle recommendations.</p>
+                <div class="tech-stack"><strong>Tech Stack:</strong> R, Shiny, ggplot2, Plotly, Random Forest, Isolation Forest</div>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Deep841/Smart-Fitness-Insights" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
           <!-- Blood Management System -->
           <article class="project-card">
             <div class="project-icon"><i class="fa-solid fa-droplet"></i></div>
@@ -370,9 +389,8 @@
               </div>
             </div>
           </article>
-        </details>
-
-      </div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -489,10 +507,11 @@
       </div>
     </div>
 
-    <footer class="copyright">
-      <p>Copyright&nbsp;© <span>Deep</span>. Made with <i class="fas fa-heart"></i> by Deep</p>
-    </footer>
   </section>
+
+  <footer class="copyright">
+    <p>Copyright&nbsp;© <span>Deep</span>. Made with <i class="fas fa-heart"></i> by Deep</p>
+  </footer>
 
   <!-- ===== SCRIPTS ===== -->
   <script>
@@ -508,16 +527,78 @@
       if (target) { target.classList.add("active-tab"); target.setAttribute('aria-hidden','false'); }
     }
 
-    /* ---------- Mobile nav ---------- */
-    const sidemenu = document.getElementById("sidemenu");
+    /* ---------- Navigation ---------- */
+    const navbar = document.querySelector('.navbar');
+    const sidemenu = document.getElementById('sidemenu');
+    const menuButton = document.querySelector('.open-menu');
+    const closeButton = document.querySelector('.close-menu');
+    const navOverlay = document.querySelector('.nav-overlay');
     const mobileNav = window.matchMedia('(max-width: 900px)');
-    sidemenu.setAttribute('aria-hidden', mobileNav.matches ? 'true' : 'false');
-    function openmenu()  { sidemenu.classList.add('open'); sidemenu.setAttribute('aria-hidden','false'); }
-    function closemenu() { sidemenu.classList.remove('open'); sidemenu.setAttribute('aria-hidden', mobileNav.matches ? 'true' : 'false'); }
-    window.addEventListener('resize', () => {
-      if (!mobileNav.matches) sidemenu.classList.remove('open');
-      sidemenu.setAttribute('aria-hidden', mobileNav.matches && !sidemenu.classList.contains('open') ? 'true' : 'false');
+
+    function syncNavState() {
+      const isMobile = mobileNav.matches;
+      const isOpen = sidemenu.classList.contains('open');
+      sidemenu.setAttribute('aria-hidden', isMobile && !isOpen ? 'true' : 'false');
+      sidemenu.inert = isMobile && !isOpen;
+    }
+
+    function openmenu() {
+      if (!mobileNav.matches) return;
+      sidemenu.classList.add('open');
+      navOverlay.classList.add('active');
+      document.body.classList.add('nav-open');
+      menuButton.setAttribute('aria-expanded', 'true');
+      menuButton.setAttribute('aria-label', 'Close navigation');
+      syncNavState();
+      sidemenu.querySelector('a').focus();
+    }
+
+    function closemenu(returnFocus = true) {
+      const wasOpen = sidemenu.classList.contains('open');
+      sidemenu.classList.remove('open');
+      navOverlay.classList.remove('active');
+      document.body.classList.remove('nav-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation');
+      syncNavState();
+      if (returnFocus && wasOpen) menuButton.focus();
+    }
+
+    menuButton.addEventListener('click', () => {
+      if (sidemenu.classList.contains('open')) closemenu();
+      else openmenu();
     });
+    closeButton.addEventListener('click', () => closemenu());
+    navOverlay.addEventListener('click', () => closemenu());
+    sidemenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      if (mobileNav.matches) closemenu();
+    }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && sidemenu.classList.contains('open')) closemenu();
+    });
+    mobileNav.addEventListener('change', () => {
+      closemenu(false);
+      syncNavState();
+    });
+
+    function updateNavbar() {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }
+    updateNavbar();
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+
+    const sectionLinks = [...sidemenu.querySelectorAll('a[href^="#"]')];
+    const sectionObserver = new IntersectionObserver(entries => {
+      const visibleSections = entries.filter(entry => entry.isIntersecting);
+      if (!visibleSections.length) return;
+      const current = visibleSections.sort((a, b) => Math.abs(a.boundingClientRect.top - 100) - Math.abs(b.boundingClientRect.top - 100))[0];
+      sectionLinks.forEach(link => {
+        if (link.hash === `#${current.target.id}`) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-90px 0px -60% 0px', threshold: 0 });
+    document.querySelectorAll('#header, #about, #projects, #certificate_section, #contact').forEach(section => sectionObserver.observe(section));
+    syncNavState();
 
     /* ---------- Google Sheets contact form ---------- */
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyJTTl_Si1to7hN4SMe6q7bgpIcS_R6nInRB_afAiqnNhIUiVWWQ2fhO8lGcpIFTTA5/exec';
@@ -566,21 +647,6 @@
       });
     }
 
-    // Close menu when clicking outside on small screens
-    document.addEventListener('click', (e) => {
-      const menuOpen = sidemenu && sidemenu.classList.contains('open');
-      const isClickInsideMenu = sidemenu && sidemenu.contains(e.target);
-      const isMenuButton = e.target.closest('.open-menu');
-      if (menuOpen && !isClickInsideMenu && !isMenuButton) {
-        closemenu();
-      }
-    });
-
-    sidemenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.matchMedia('(max-width: 900px)').matches) closemenu();
-      });
-    });
   </script>
 </body>
 </html>
