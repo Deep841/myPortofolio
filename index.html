@@ -571,7 +571,10 @@
     closeButton.addEventListener('click', () => closemenu());
     navOverlay.addEventListener('click', () => closemenu());
     sidemenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      if (mobileNav.matches) closemenu();
+      if (mobileNav.matches) {
+        closemenu(false);
+        window.setTimeout(() => menuButton.focus(), 0);
+      }
     }));
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && sidemenu.classList.contains('open')) closemenu();
@@ -588,16 +591,27 @@
     window.addEventListener('scroll', updateNavbar, { passive: true });
 
     const sectionLinks = [...sidemenu.querySelectorAll('a[href^="#"]')];
-    const sectionObserver = new IntersectionObserver(entries => {
-      const visibleSections = entries.filter(entry => entry.isIntersecting);
-      if (!visibleSections.length) return;
-      const current = visibleSections.sort((a, b) => Math.abs(a.boundingClientRect.top - 100) - Math.abs(b.boundingClientRect.top - 100))[0];
+    const observedSections = [...document.querySelectorAll('#header, #about, #projects, #certificate_section, #contact')];
+    function updateActiveNav() {
+      const activationLine = 110;
+      const current = observedSections.find(section => {
+        const bounds = section.getBoundingClientRect();
+        return bounds.top <= activationLine && bounds.bottom > activationLine;
+      }) || observedSections.reduce((nearest, section) => {
+        if (!nearest) return section;
+        return Math.abs(section.getBoundingClientRect().top - activationLine) < Math.abs(nearest.getBoundingClientRect().top - activationLine) ? section : nearest;
+      }, null);
+      if (!current) return;
       sectionLinks.forEach(link => {
-        if (link.hash === `#${current.target.id}`) link.setAttribute('aria-current', 'page');
+        if (link.hash === `#${current.id}`) link.setAttribute('aria-current', 'page');
         else link.removeAttribute('aria-current');
       });
-    }, { rootMargin: '-90px 0px -60% 0px', threshold: 0 });
-    document.querySelectorAll('#header, #about, #projects, #certificate_section, #contact').forEach(section => sectionObserver.observe(section));
+    }
+    const sectionObserver = new IntersectionObserver(updateActiveNav, { rootMargin: '-90px 0px -60% 0px', threshold: 0 });
+    observedSections.forEach(section => sectionObserver.observe(section));
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    window.addEventListener('resize', updateActiveNav);
+    updateActiveNav();
     syncNavState();
 
     /* ---------- Google Sheets contact form ---------- */
